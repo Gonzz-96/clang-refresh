@@ -16,7 +16,11 @@ int main() {
     int file_descriptor;
     file_descriptor = open("./test", O_RDONLY);
 
-    printf("File descriptor: %d\n", file_descriptor);
+    if (file_descriptor == -1) {
+        // error
+    } else {
+        printf("File descriptor: %d\n", file_descriptor);
+    }
 
     return 0;
 }
